@@ -1,0 +1,274 @@
+@import 'tailwindcss';
+
+/* ============================================================================
+   AVENZA 2.0 — DESIGN SYSTEM TOKENS
+   Dark-first "engineered banking" system. All color is CSS variables so a
+   brand swap (once the client supplies verified logo hexes) is one file.
+   ========================================================================== */
+
+:root {
+  /* --- Ink (backgrounds / surfaces) — derived from brand black #161B26 --- */
+  --ink-950: #0f131c;
+  --ink-900: #161b26; /* primary background (Avenza black) */
+  --ink-850: #1b212e;
+  --ink-800: #212836;
+  --ink-700: #2c3444;
+  --ink-600: #3a4358;
+
+  /* --- Text --- */
+  --text-primary: #ffffff;
+  --text-secondary: #c3c9d4;
+  --text-muted: #8b93a3;
+  --text-faint: #5d6675;
+
+  /* --- Brand — Avenza orange #F28500 --- */
+  --brand-700: #c96e00;
+  --brand-600: #f28500;
+  --brand-500: #ff9a24;
+  --brand-400: #ffb259;
+  --brand-300: #ffc988;
+
+  /* --- Accents — kept warm/monochrome to honour the orange·black·white brand.
+         (token names retained so component classes need no churn) --- */
+  --accent-teal: #ff9a24;
+  --accent-teal-dim: #c96e00;
+  --accent-gold: #f28500;
+
+  /* --- States --- */
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+
+  /* --- Structural --- */
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --surface-glow: rgba(242, 133, 0, 0.14);
+
+  /* --- Semantic (dark is default) --- */
+  --bg: var(--ink-900);
+  --bg-elevated: var(--ink-850);
+  --surface: var(--ink-800);
+  --border: var(--border-hairline);
+
+  /* --- Motion --- */
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 400ms;
+  --dur-slower: 700ms;
+
+  /* --- Layout --- */
+  --container-max: 1280px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+}
+
+[data-theme='light'] {
+  --bg: #ffffff;
+  --bg-elevated: #ffffff;
+  --surface: #ffffff;
+  --text-primary: #161b26;
+  --text-secondary: #39404e;
+  --text-muted: #626a78;
+  --text-faint: #949bab;
+  --border-hairline: rgba(22, 27, 38, 0.1);
+  --border-strong: rgba(22, 27, 38, 0.16);
+  --border: var(--border-hairline);
+}
+
+/* Map tokens into Tailwind's utility namespace (v4 @theme) */
+@theme inline {
+  --color-ink-950: var(--ink-950);
+  --color-ink-900: var(--ink-900);
+  --color-ink-850: var(--ink-850);
+  --color-ink-800: var(--ink-800);
+  --color-ink-700: var(--ink-700);
+  --color-ink-600: var(--ink-600);
+
+  --color-brand-700: var(--brand-700);
+  --color-brand-600: var(--brand-600);
+  --color-brand-500: var(--brand-500);
+  --color-brand-400: var(--brand-400);
+  --color-brand-300: var(--brand-300);
+
+  --color-teal: var(--accent-teal);
+  --color-teal-dim: var(--accent-teal-dim);
+  --color-gold: var(--accent-gold);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --color-bg: var(--bg);
+  --color-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+
+  --color-fg: var(--text-primary);
+  --color-fg-secondary: var(--text-secondary);
+  --color-fg-muted: var(--text-muted);
+  --color-fg-faint: var(--text-faint);
+
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: var(--font-display), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, 'SFMono-Regular', 'Menlo', monospace;
+
+  --breakpoint-xs: 30rem;
+}
+
+/* ============================================================================
+   BASE
+   ========================================================================== */
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(242, 133, 0, 0.32);
+  color: var(--text-primary);
+}
+
+/* Fluid type scale */
+.text-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6.5vw, 5.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+.text-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+.text-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.text-h3 {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+.text-lead {
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+.overline {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-400);
+  font-weight: 500;
+}
+
+/* Layout helpers */
+.container-avz {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section {
+  padding-block: clamp(4rem, 9vw, 9rem);
+}
+
+/* Hairline + grid utilities */
+.hairline {
+  border: 1px solid var(--border);
+}
+.grid-lines {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(120deg, var(--text-primary) 0%, var(--brand-400) 52%, var(--brand-600) 120%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Focus visibility (a11y) */
+:focus-visible {
+  outline: 2px solid var(--brand-400);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Reveal-on-scroll primitive (JS toggles [data-inview]) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity var(--dur-slower) var(--ease-out-expo),
+    transform var(--dur-slower) var(--ease-out-expo);
+}
+.reveal[data-inview='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Reduced motion: disable all of it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Custom scrollbar (dark) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink-700);
+  border-radius: 8px;
+  border: 2px solid var(--ink-950);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-600);
+}

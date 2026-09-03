@@ -34,7 +34,7 @@ export default function CapabilitiesPage() {
                   className="group flex h-full flex-col rounded-2xl border border-line bg-ink-850/60 p-7 transition-all hover:-translate-y-1 hover:border-brand-400/50"
                 >
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-line bg-white/[0.03]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-line bg-fill-2">
                       <Icon className="h-6 w-6 text-brand-400" />
                     </div>
                     <ArrowUpRight className="h-5 w-5 text-fg-faint transition-colors group-hover:text-brand-400" />

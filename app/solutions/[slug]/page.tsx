@@ -74,7 +74,7 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
               <h2 className="text-h3 mb-6 text-fg">Expected outcomes</h2>
               <div className="grid gap-3 sm:grid-cols-2">
                 {s.outcomes.map((o, i) => (
-                  <Reveal key={i} delay={i * 50} className="flex items-start gap-3 rounded-xl border border-line bg-white/[0.02] p-4">
+                  <Reveal key={i} delay={i * 50} className="flex items-start gap-3 rounded-xl border border-line bg-fill-1 p-4">
                     <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
                     <p className="text-sm text-fg-secondary">{o}</p>
                   </Reveal>
@@ -89,7 +89,7 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
               <ul className="space-y-2">
                 {caps.map((c) => (
                   <li key={c!.slug}>
-                    <Link href={`/capabilities/${c!.slug}`} className="group flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm text-fg-secondary transition-colors hover:bg-white/[0.03] hover:text-fg">
+                    <Link href={`/capabilities/${c!.slug}`} className="group flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm text-fg-secondary transition-colors hover:bg-fill-2 hover:text-fg">
                       {c!.title}
                       <ArrowRight className="h-3.5 w-3.5 text-fg-faint transition-transform group-hover:translate-x-0.5" />
                     </Link>
@@ -103,7 +103,7 @@ export default async function SolutionDetail({ params }: { params: Promise<{ slu
                 <ul className="space-y-2">
                   {accs.map((a) => (
                     <li key={a!.slug}>
-                      <Link href={`/accelerators/${a!.slug}`} className="group flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm text-fg-secondary transition-colors hover:bg-white/[0.03] hover:text-fg">
+                      <Link href={`/accelerators/${a!.slug}`} className="group flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm text-fg-secondary transition-colors hover:bg-fill-2 hover:text-fg">
                         {a!.name}
                         <ArrowRight className="h-3.5 w-3.5 text-fg-faint transition-transform group-hover:translate-x-0.5" />
                       </Link>

@@ -173,7 +173,7 @@ export function Ecosystem() {
         {!reduced && (
           <circle cx={CENTER} cy={CENTER} r="42" fill="none" stroke="var(--accent-teal)" strokeWidth="1.5" className="avz-pulse" />
         )}
-        <text x={CENTER} y={CENTER + 5} textAnchor="middle" className="font-display" style={{ fontSize: 17, fontWeight: 700 }} fill="var(--ink-950)">
+        <text x={CENTER} y={CENTER + 5} textAnchor="middle" className="font-display" style={{ fontSize: 17, fontWeight: 700 }} fill="var(--on-brand)">
           Avenza
         </text>
       </svg>

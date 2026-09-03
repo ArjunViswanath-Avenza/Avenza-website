@@ -66,7 +66,7 @@ export function DeliveryLifecycle() {
                   <p className="mt-3 text-fg-secondary">{stage.summary}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {stage.capabilities.map((c) => (
-                      <span key={c} className="rounded-md border border-line bg-white/[0.03] px-3 py-1.5 text-xs text-fg-muted">
+                      <span key={c} className="rounded-md border border-line bg-fill-2 px-3 py-1.5 text-xs text-fg-muted">
                         {c}
                       </span>
                     ))}

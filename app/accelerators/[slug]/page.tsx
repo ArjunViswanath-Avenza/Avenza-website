@@ -46,7 +46,7 @@ export default async function AcceleratorDetail({ params }: { params: Promise<{ 
           { name: a.name, href: `/accelerators/${a.slug}` },
         ]}
       >
-        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-line bg-white/[0.03]">
+        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-line bg-fill-2">
           <Icon className="h-7 w-7 text-brand-400" />
         </div>
       </PageHero>

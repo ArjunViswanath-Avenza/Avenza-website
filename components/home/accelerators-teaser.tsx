@@ -26,7 +26,7 @@ export function AcceleratorsTeaser() {
                   className="group flex h-full flex-col rounded-xl border border-line bg-ink-850/60 p-6 transition-all hover:-translate-y-1 hover:border-brand-400/50"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-white/[0.03]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-fill-2">
                       <Icon className="h-5 w-5 text-brand-400" />
                     </div>
                     <span className="rounded-full border border-line px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-wider text-fg-muted">

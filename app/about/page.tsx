@@ -63,7 +63,7 @@ export default function AboutPage() {
             {engagementModels.map((m, i) => (
               <Reveal key={m.title} delay={i * 70}>
                 <div className="flex h-full flex-col rounded-2xl border border-line bg-ink-850/60 p-7">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-line bg-white/[0.03]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-line bg-fill-2">
                     <m.icon className="h-6 w-6 text-brand-400" />
                   </div>
                   <h3 className="mt-5 text-lg font-semibold text-fg">{m.title}</h3>

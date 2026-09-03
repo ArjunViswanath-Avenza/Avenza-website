@@ -18,7 +18,7 @@ export function Hero() {
         <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           {/* Copy */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-line bg-white/[0.03] px-3.5 py-1.5 text-xs text-fg-secondary">
+            <div className="inline-flex items-center gap-2 rounded-full border border-line bg-fill-2 px-3.5 py-1.5 text-xs text-fg-secondary">
               <span className="h-1.5 w-1.5 rounded-full bg-teal" />
               Banking technology transformation
             </div>

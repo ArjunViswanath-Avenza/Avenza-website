@@ -49,7 +49,7 @@ export default async function CapabilityDetail({ params }: { params: Promise<{ s
           { name: cap.title, href: `/capabilities/${cap.slug}` },
         ]}
       >
-        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-line bg-white/[0.03]">
+        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-line bg-fill-2">
           <Icon className="h-7 w-7 text-brand-400" />
         </div>
       </PageHero>
@@ -80,7 +80,7 @@ export default async function CapabilityDetail({ params }: { params: Promise<{ s
               <div className="overline mb-4">Services</div>
               <ul className="flex flex-wrap gap-2">
                 {cap.services.map((s) => (
-                  <li key={s} className="rounded-md border border-line bg-white/[0.02] px-3 py-1.5 text-sm text-fg-secondary">
+                  <li key={s} className="rounded-md border border-line bg-fill-1 px-3 py-1.5 text-sm text-fg-secondary">
                     {s}
                   </li>
                 ))}

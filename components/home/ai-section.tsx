@@ -34,7 +34,7 @@ export function AISection() {
             <div className="mt-8 grid grid-cols-2 gap-3">
               {uses.map((u, i) => (
                 <Reveal key={u.label} delay={i * 50}>
-                  <div className="flex items-center gap-3 rounded-lg border border-line bg-white/[0.02] px-4 py-3">
+                  <div className="flex items-center gap-3 rounded-lg border border-line bg-fill-1 px-4 py-3">
                     <u.icon className="h-4.5 w-4.5 shrink-0 text-teal" />
                     <span className="text-sm text-fg-secondary">{u.label}</span>
                   </div>
@@ -92,7 +92,7 @@ function FlowRow({
   }[tone];
   return (
     <div className="flex items-center gap-4 rounded-xl border border-line bg-ink-900 p-4">
-      <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border bg-white/[0.02] font-mono text-xs ${toneMap}`}>
+      <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border bg-fill-1 font-mono text-xs ${toneMap}`}>
         {icon ?? n}
       </div>
       <div>

@@ -59,12 +59,12 @@ export function ContactWizard() {
         </div>
         <h2 className="mt-6 text-h3 text-fg">Thank you — message received.</h2>
         <p className="mt-3 text-fg-secondary">Our team will get back to you shortly. Here is your reference.</p>
-        <div className="mt-6 inline-flex items-center gap-3 rounded-xl border border-line bg-white/[0.02] px-5 py-3">
+        <div className="mt-6 inline-flex items-center gap-3 rounded-xl border border-line bg-fill-1 px-5 py-3">
           <span className="text-xs text-fg-muted">Reference</span>
           <span className="font-mono text-lg font-semibold text-gradient">{reference}</span>
         </div>
         <div className="mt-8">
-          <Link href="/" className="inline-flex h-11 items-center rounded-lg bg-brand-600 px-5 text-sm font-semibold text-[color:var(--ink-950)] hover:bg-brand-500">Back to home</Link>
+          <Link href="/" className="inline-flex h-11 items-center rounded-lg bg-brand-600 px-5 text-sm font-semibold text-[color:var(--on-brand)] hover:bg-brand-500">Back to home</Link>
         </div>
       </motion.div>
     );
@@ -106,7 +106,7 @@ export function ContactWizard() {
             <Shell title="What's the business challenge?">
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-fg-secondary">Describe the challenge <span className="text-brand-400">*</span></label>
-                <textarea rows={6} value={form.challenge} onChange={(e) => set('challenge', e.target.value)} placeholder="e.g. We're planning a Temenos Transact upgrade and need to de-risk the customisation impact…" className={cn('w-full rounded-lg border bg-white/[0.02] p-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none', errors.challenge ? 'border-danger/60' : 'border-line focus:border-brand-400/60')} />
+                <textarea rows={6} value={form.challenge} onChange={(e) => set('challenge', e.target.value)} placeholder="e.g. We're planning a Temenos Transact upgrade and need to de-risk the customisation impact…" className={cn('w-full rounded-lg border bg-fill-1 p-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none', errors.challenge ? 'border-danger/60' : 'border-line focus:border-brand-400/60')} />
                 {errors.challenge && <Err msg={errors.challenge} />}
               </div>
             </Shell>
@@ -137,11 +137,11 @@ export function ContactWizard() {
           <ArrowLeft className="h-4 w-4" /> Back
         </button>
         {step < total - 1 ? (
-          <button onClick={() => validate(step) && setStep((s) => s + 1)} className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--ink-950)] hover:bg-brand-500">
+          <button onClick={() => validate(step) && setStep((s) => s + 1)} className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--on-brand)] hover:bg-brand-500">
             Continue <ArrowRight className="h-4 w-4" />
           </button>
         ) : (
-          <button onClick={submit} disabled={submitting} className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--ink-950)] hover:bg-brand-500 disabled:opacity-60">
+          <button onClick={submit} disabled={submitting} className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--on-brand)] hover:bg-brand-500 disabled:opacity-60">
             {submitting ? 'Sending…' : 'Send message'} {!submitting && <Check className="h-4 w-4" />}
           </button>
         )}
@@ -162,7 +162,7 @@ function Input({ label, name, value, onChange, error, type = 'text', required, p
   return (
     <div>
       <label htmlFor={name} className="mb-1.5 block text-sm font-medium text-fg-secondary">{label} {required && <span className="text-brand-400">*</span>}</label>
-      <input id={name} type={type} value={value} placeholder={placeholder} onChange={(e) => onChange(name, e.target.value)} className={cn('h-11 w-full rounded-lg border bg-white/[0.02] px-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none', error ? 'border-danger/60' : 'border-line focus:border-brand-400/60')} />
+      <input id={name} type={type} value={value} placeholder={placeholder} onChange={(e) => onChange(name, e.target.value)} className={cn('h-11 w-full rounded-lg border bg-fill-1 px-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none', error ? 'border-danger/60' : 'border-line focus:border-brand-400/60')} />
       {error && <Err msg={error} />}
     </div>
   );

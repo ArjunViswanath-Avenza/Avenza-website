@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 import { primaryNav, type NavItem } from '@/config/site';
 import { Logo } from './logo';
+import { ThemeToggle } from './theme-toggle';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -71,20 +72,24 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <Button href="/contact" size="sm" withArrow>
             Let&apos;s Talk
           </Button>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-fg lg:hidden"
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((v) => !v)}
-        >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        {/* Mobile controls */}
+        <div className="flex items-center gap-1 lg:hidden">
+          <ThemeToggle />
+          <button
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md text-fg"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} isActive={isActive} />
@@ -152,7 +157,7 @@ function NavEntry({
                     <Link
                       key={child.href}
                       href={child.href}
-                      className="group rounded-lg px-3 py-2.5 transition-colors hover:bg-white/[0.04]"
+                      className="group rounded-lg px-3 py-2.5 transition-colors hover:bg-fill-2"
                     >
                       <div className="flex items-center gap-1.5 text-[0.9rem] font-medium text-fg">
                         {child.title}

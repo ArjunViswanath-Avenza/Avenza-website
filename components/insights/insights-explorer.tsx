@@ -36,7 +36,7 @@ export function InsightsExplorer() {
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search insights…"
             aria-label="Search insights"
-            className="h-11 w-full rounded-lg border border-line bg-white/[0.02] pl-10 pr-4 text-sm text-fg placeholder:text-fg-faint focus:border-brand-400/60 focus:outline-none"
+            className="h-11 w-full rounded-lg border border-line bg-fill-1 pl-10 pr-4 text-sm text-fg placeholder:text-fg-faint focus:border-brand-400/60 focus:outline-none"
           />
         </div>
         <div className="flex flex-wrap gap-2">

@@ -44,6 +44,14 @@
   --border-strong: rgba(255, 255, 255, 0.14);
   --surface-glow: rgba(242, 133, 0, 0.14);
 
+  /* Overlay fills (subtle tints on surfaces). Theme-aware — flip in light mode. */
+  --fill-1: rgba(255, 255, 255, 0.02);
+  --fill-2: rgba(255, 255, 255, 0.04);
+  --fill-3: rgba(255, 255, 255, 0.06);
+
+  /* Constant colour that always sits on the orange brand fill (both themes). */
+  --on-brand: #161b26;
+
   /* --- Semantic (dark is default) --- */
   --bg: var(--ink-900);
   --bg-elevated: var(--ink-850);
@@ -64,16 +72,36 @@
 }
 
 [data-theme='light'] {
-  --bg: #ffffff;
-  --bg-elevated: #ffffff;
-  --surface: #ffffff;
+  /* Flip the ink scale: base → light, "deeper" → progressively darker greys.
+     --bg / --surface / --border derive from these automatically. */
+  --ink-950: #eef1f6; /* deepest surface (e.g. footer / scrolled header) */
+  --ink-900: #f6f8fb; /* page background */
+  --ink-850: #ffffff; /* elevated cards */
+  --ink-800: #ffffff; /* surfaces */
+  --ink-700: #e4e9f0; /* subtle borders / fills */
+  --ink-600: #d3dae4;
+
   --text-primary: #161b26;
   --text-secondary: #39404e;
-  --text-muted: #626a78;
+  --text-muted: #5b6473;
   --text-faint: #949bab;
+
+  /* Punchier, deeper orange so the brand reads vividly on white
+     (the softer amber is kept for dark mode). */
+  --brand-700: #c24e00;
+  --brand-600: #f26200;
+  --brand-500: #ff7a1f;
+  --brand-400: #ff9247;
+  --brand-300: #ffae73;
+
   --border-hairline: rgba(22, 27, 38, 0.1);
   --border-strong: rgba(22, 27, 38, 0.16);
-  --border: var(--border-hairline);
+
+  --fill-1: rgba(22, 27, 38, 0.03);
+  --fill-2: rgba(22, 27, 38, 0.05);
+  --fill-3: rgba(22, 27, 38, 0.07);
+
+  --surface-glow: rgba(242, 98, 0, 0.12);
 }
 
 /* Map tokens into Tailwind's utility namespace (v4 @theme) */
@@ -110,6 +138,10 @@
 
   --color-line: var(--border);
   --color-line-strong: var(--border-strong);
+
+  --color-fill-1: var(--fill-1);
+  --color-fill-2: var(--fill-2);
+  --color-fill-3: var(--fill-3);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-display: var(--font-display), var(--font-inter), ui-sans-serif, system-ui, sans-serif;

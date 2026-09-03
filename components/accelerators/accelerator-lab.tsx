@@ -46,7 +46,7 @@ export function AcceleratorLab() {
                 className="flex w-full items-center gap-4 p-6 text-left"
                 aria-expanded={isOpen}
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-line bg-white/[0.03]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-line bg-fill-2">
                   <Icon className="h-6 w-6 text-brand-400" />
                 </div>
                 <div className="flex-1">

@@ -11,9 +11,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-brand-600 text-[color:var(--ink-950)] font-semibold hover:bg-brand-500 shadow-[0_1px_0_0_rgba(255,255,255,0.18)_inset,0_10px_30px_-12px_rgba(242,133,0,0.7)]',
+    'bg-brand-600 text-[color:var(--on-brand)] font-semibold hover:bg-brand-500 shadow-[0_1px_0_0_rgba(255,255,255,0.18)_inset,0_10px_30px_-12px_rgba(242,133,0,0.7)]',
   secondary:
-    'border border-line-strong bg-white/[0.02] text-fg hover:border-brand-400/60 hover:bg-white/[0.05]',
+    'border border-line-strong bg-fill-1 text-fg hover:border-brand-400/60 hover:bg-fill-3',
   ghost: 'text-fg-secondary hover:text-fg',
 };
 

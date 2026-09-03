@@ -190,7 +190,7 @@ export function ApplyWizard({ jobSlug, jobTitle }: { jobSlug: string; jobTitle: 
             {step === 4 && (
               <StepShell title="Review & submit" desc="Check everything looks right before you submit.">
                 <ReviewList form={form} resume={resume} jobTitle={jobTitle} />
-                <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-xl border border-line bg-white/[0.02] p-4">
+                <label className="mt-6 flex cursor-pointer items-start gap-3 rounded-xl border border-line bg-fill-1 p-4">
                   <input
                     type="checkbox"
                     checked={form.consent === true}
@@ -224,7 +224,7 @@ export function ApplyWizard({ jobSlug, jobTitle }: { jobSlug: string; jobTitle: 
           {step < totalSteps - 1 ? (
             <button
               onClick={next}
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--ink-950)] transition-colors hover:bg-brand-500"
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--on-brand)] transition-colors hover:bg-brand-500"
             >
               Continue <ArrowRight className="h-4 w-4" />
             </button>
@@ -232,7 +232,7 @@ export function ApplyWizard({ jobSlug, jobTitle }: { jobSlug: string; jobTitle: 
             <button
               onClick={submit}
               disabled={submitting}
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--ink-950)] transition-colors hover:bg-brand-500 disabled:opacity-60"
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold text-[color:var(--on-brand)] transition-colors hover:bg-brand-500 disabled:opacity-60"
             >
               {submitting ? 'Submitting…' : 'Submit application'}
               {!submitting && <Check className="h-4 w-4" />}
@@ -256,7 +256,7 @@ function Stepper({ step }: { step: number }) {
             <span
               className={cn(
                 'flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium transition-colors',
-                state === 'done' && 'border-brand-400 bg-brand-600 text-[color:var(--ink-950)]',
+                state === 'done' && 'border-brand-400 bg-brand-600 text-[color:var(--on-brand)]',
                 state === 'active' && 'border-brand-400 text-brand-300',
                 state === 'todo' && 'border-line text-fg-faint',
               )}
@@ -305,7 +305,7 @@ function Field({
         onChange={(e) => onChange(name, e.target.value)}
         aria-invalid={!!error}
         className={cn(
-          'h-11 w-full rounded-lg border bg-white/[0.02] px-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none',
+          'h-11 w-full rounded-lg border bg-fill-1 px-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none',
           error ? 'border-danger/60' : 'border-line focus:border-brand-400/60',
         )}
       />
@@ -324,7 +324,7 @@ function TextArea({ label, name, value, onChange, error }: { label: string; name
         rows={5}
         value={String(value ?? '')}
         onChange={(e) => onChange(name, e.target.value)}
-        className={cn('w-full rounded-lg border bg-white/[0.02] p-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none', error ? 'border-danger/60' : 'border-line focus:border-brand-400/60')}
+        className={cn('w-full rounded-lg border bg-fill-1 p-4 text-sm text-fg placeholder:text-fg-faint focus:outline-none', error ? 'border-danger/60' : 'border-line focus:border-brand-400/60')}
       />
       {error && <FieldError msg={error} />}
     </div>
@@ -364,7 +364,7 @@ function ResumeDrop({ resume, error, pct, onFile, onRemove }: { resume: File | n
   const [drag, setDrag] = useState(false);
   if (resume) {
     return (
-      <div className="rounded-xl border border-line bg-white/[0.02] p-5">
+      <div className="rounded-xl border border-line bg-fill-1 p-5">
         <div className="flex items-center gap-4">
           <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-600/15">
             <FileText className="h-5 w-5 text-brand-400" />
@@ -448,7 +448,7 @@ function Success({ reference, jobTitle }: { reference: string; jobTitle: string 
       <p className="mt-3 text-fg-secondary">
         Thank you for applying for <span className="text-fg">{jobTitle}</span>. We’ll be in touch about next steps.
       </p>
-      <div className="mt-6 inline-flex items-center gap-3 rounded-xl border border-line bg-white/[0.02] px-5 py-3">
+      <div className="mt-6 inline-flex items-center gap-3 rounded-xl border border-line bg-fill-1 px-5 py-3">
         <span className="text-xs text-fg-muted">Reference</span>
         <span className="font-mono text-lg font-semibold text-gradient">{reference}</span>
       </div>
@@ -459,7 +459,7 @@ function Success({ reference, jobTitle }: { reference: string; jobTitle: string 
         <Link href="/careers/jobs" className="inline-flex h-11 items-center rounded-lg border border-line px-5 text-sm text-fg-secondary hover:text-fg">
           Browse more roles
         </Link>
-        <Link href="/" className="inline-flex h-11 items-center rounded-lg bg-brand-600 px-5 text-sm font-semibold text-[color:var(--ink-950)] hover:bg-brand-500">
+        <Link href="/" className="inline-flex h-11 items-center rounded-lg bg-brand-600 px-5 text-sm font-semibold text-[color:var(--on-brand)] hover:bg-brand-500">
           Back to home
         </Link>
       </div>

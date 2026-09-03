@@ -17,7 +17,7 @@ export function WhatWeSolve() {
         <div className="mt-12 flex flex-wrap gap-2.5">
           {challenges.map((c, i) => (
             <Reveal as="span" key={c} delay={i * 40}>
-              <span className="inline-block rounded-full border border-line bg-white/[0.02] px-4 py-2 text-sm text-fg-secondary transition-colors hover:border-brand-400/50 hover:text-fg">
+              <span className="inline-block rounded-full border border-line bg-fill-1 px-4 py-2 text-sm text-fg-secondary transition-colors hover:border-brand-400/50 hover:text-fg">
                 {c}
               </span>
             </Reveal>

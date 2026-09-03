@@ -35,7 +35,7 @@ export function CareerJourney() {
             <span
               className={cn(
                 'flex h-11 w-11 items-center justify-center rounded-full border transition-all duration-300',
-                i <= active ? 'border-brand-400 bg-brand-600 text-[color:var(--ink-950)]' : 'border-line-strong bg-ink-900 text-fg-muted',
+                i <= active ? 'border-brand-400 bg-brand-600 text-[color:var(--on-brand)]' : 'border-line-strong bg-ink-900 text-fg-muted',
               )}
             >
               <s.icon className="h-5 w-5" />

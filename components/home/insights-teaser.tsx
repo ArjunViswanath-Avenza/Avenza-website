@@ -55,7 +55,7 @@ export function InsightsTeaser() {
             <Reveal key={post.slug} delay={i * 80}>
               <Link
                 href={`/insights/${post.slug}`}
-                className="group flex items-center justify-between gap-4 rounded-xl border border-line bg-white/[0.02] px-5 py-4 transition-colors hover:border-brand-400/40"
+                className="group flex items-center justify-between gap-4 rounded-xl border border-line bg-fill-1 px-5 py-4 transition-colors hover:border-brand-400/40"
               >
                 <div>
                   <div className="text-sm font-medium text-fg">{post.title}</div>

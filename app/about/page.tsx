@@ -3,6 +3,8 @@ import { PageHero } from '@/components/site/page-hero';
 import { Reveal } from '@/components/primitives/reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { CtaBand } from '@/components/site/cta-band';
+import { Leadership } from '@/components/team/leadership';
+import { ClientLogos } from '@/components/clients/client-logos';
 import { whyPillars } from '@/content/site-content';
 import { Handshake, Users, Layers } from 'lucide-react';
 
@@ -91,6 +93,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <Leadership />
+
+      <ClientLogos title="In good company." lead="A selection of the banks and financial institutions our people have delivered for." />
 
       <CtaBand />
     </>

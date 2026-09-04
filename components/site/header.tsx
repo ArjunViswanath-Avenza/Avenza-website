@@ -46,8 +46,9 @@ export function Header() {
   const isActive = (href: string) => href !== '/' && pathname.startsWith(href);
 
   return (
-    <header
-      className={cn(
+    <>
+      <header
+        className={cn(
         'fixed inset-x-0 top-0 z-50 transition-all duration-[var(--dur-slow)] ease-[var(--ease-out-expo)]',
         scrolled
           ? 'border-b border-line bg-ink-950/80 backdrop-blur-xl'
@@ -92,8 +93,10 @@ export function Header() {
         </div>
       </div>
 
+      </header>
+
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} isActive={isActive} />
-    </header>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Boxes, FileStack, GitCompareArrows, ClipboardCheck, Rocket, FileText, Sparkles } from 'lucide-react';
+import { Rocket, ScanFace, Keyboard, ScanLine, MapPin, Mic, FileCode2, Lock, Workflow } from 'lucide-react';
 
 export type Accelerator = {
   slug: string;
@@ -12,77 +12,101 @@ export type Accelerator = {
   benefits: string[];
 };
 
-/** Positioned as Avenza IP. No confidential implementation detail is exposed. */
+/**
+ * Avenza POCs / accelerators. No confidential implementation detail is exposed.
+ * (Demo videos were removed at the client's request — see /backup for the
+ * previous video-enabled version.)
+ */
 export const accelerators: Accelerator[] = [
   {
-    slug: 'migration-toolkit',
-    name: 'Migration Toolkit',
-    icon: Boxes,
-    stage: 'Transform',
-    problem: 'Migrations lose time and confidence to bespoke extraction, mapping and reconciliation built from scratch each time.',
-    solution: 'A reusable migration framework covering extraction, transformation and reconciliation with built-in traceability.',
-    howItWorks: 'Pre-built pipelines and reconciliation controls are configured to the target model, so effort shifts from plumbing to data quality.',
-    benefits: ['Lower migration effort', 'End-to-end traceability', 'Faster reconciliation', 'Repeatable across programmes'],
-  },
-  {
-    slug: 'config-templates',
-    name: 'Configuration Templates',
-    icon: FileStack,
-    stage: 'Transform',
-    problem: 'Core and upgrade configuration is repetitive, error-prone and slow when started from a blank canvas.',
-    solution: 'A library of proven configuration templates for common banking models and modules.',
-    howItWorks: 'Templates are adapted to the bank’s requirements, giving a known-good baseline instead of first-principles configuration.',
-    benefits: ['Faster configuration', 'Fewer defects', 'Consistency across environments'],
-  },
-  {
-    slug: 'data-mapping',
-    name: 'Data Mapping Utilities',
-    icon: GitCompareArrows,
-    stage: 'Assess',
-    problem: 'Source-to-target mapping is one of the most time-consuming and error-sensitive parts of any migration.',
-    solution: 'Reusable mapping utilities that accelerate and document source-to-target definitions.',
-    howItWorks: 'Mappings are captured, validated and versioned in a structured form that feeds directly into migration pipelines.',
-    benefits: ['Accelerated mapping', 'Documented lineage', 'Reduced rework'],
-  },
-  {
-    slug: 'test-automation',
-    name: 'Test Automation Framework',
-    icon: ClipboardCheck,
-    stage: 'Validate',
-    problem: 'Manual regression cannot keep pace with a live transformation, so coverage and confidence slip.',
-    solution: 'A banking-aware automation framework for regression, integration and non-functional testing.',
-    howItWorks: 'Reusable test assets and harnesses are configured to the programme, enabling repeatable automated runs.',
-    benefits: ['Higher coverage', 'Faster releases', 'Audit-ready evidence'],
-  },
-  {
-    slug: 'deployment-automation',
-    name: 'Deployment Automation',
+    slug: 'ci-cd-devops-solution',
+    name: 'CI/CD & DevOps Solution',
     icon: Rocket,
     stage: 'Deploy',
-    problem: 'Manual, inconsistent deployments introduce risk and slow every environment promotion.',
-    solution: 'Automation that standardises and de-risks build, promotion and deployment.',
-    howItWorks: 'Deployment steps are codified and repeatable, reducing manual error and shortening cutover.',
-    benefits: ['Predictable deployments', 'Reduced cutover risk', 'Faster environment turnaround'],
+    problem: 'Manual, inconsistent banking deployments introduce risk and slow every release across environments.',
+    solution: 'An automated CI/CD and DevOps pipeline that builds, tests and promotes banking changes with repeatable, auditable deployments.',
+    howItWorks: 'Source changes trigger automated build, test and deploy stages with approvals and rollback, standardising promotion from development through to production.',
+    benefits: ['Predictable, repeatable releases', 'Faster environment turnaround', 'Built-in approvals & rollback', 'Reduced cutover risk'],
   },
   {
-    slug: 'documentation-automation',
-    name: 'Documentation Automation',
-    icon: FileText,
-    stage: 'Optimise',
-    problem: 'Documentation drifts out of date the moment a programme moves, eroding knowledge and audit-readiness.',
-    solution: 'AI-assisted generation and maintenance of technical and configuration documentation.',
-    howItWorks: 'Documentation is generated from the current state and reviewed by experts, keeping knowledge current with far less effort.',
-    benefits: ['Always-current documentation', 'Lower manual effort', 'Stronger audit-readiness'],
-  },
-  {
-    slug: 'ai-implementation',
-    name: 'AI Implementation Tools',
-    icon: Sparkles,
+    slug: 'jumio-integration',
+    name: 'Jumio Identity Integration',
+    icon: ScanFace,
     stage: 'Transform',
-    problem: 'Skilled engineers spend too much time on repeatable implementation and conversion work.',
-    solution: 'AI-powered tooling for code analysis, conversion and implementation assistance — with a human in the loop.',
-    howItWorks: 'AI proposes conversions, documentation and test cases; banking experts validate every output before it lands.',
-    benefits: ['Reduced implementation effort', 'Consistent quality', 'Expert oversight retained'],
+    problem: 'Manual identity verification slows digital onboarding and adds compliance risk.',
+    solution: 'A Jumio-powered identity and document verification integration for fast, compliant digital KYC and onboarding.',
+    howItWorks: 'The onboarding journey captures ID documents and biometrics, verifies them through Jumio, and returns a decision straight back into the banking flow.',
+    benefits: ['Faster digital onboarding', 'Automated KYC/AML checks', 'Reduced manual review', 'Stronger fraud protection'],
+  },
+  {
+    slug: 'virtual-keyboard',
+    name: 'Secure Virtual Keyboard',
+    icon: Keyboard,
+    stage: 'Transform',
+    problem: 'Credential entry on shared or untrusted devices is exposed to keyloggers and screen capture.',
+    solution: 'An on-screen secure virtual keyboard that protects sensitive credential entry across banking channels.',
+    howItWorks: 'Users enter PINs and passwords through a randomised on-screen keypad, keeping keystrokes off the physical keyboard and out of reach of keyloggers.',
+    benefits: ['Keylogger-resistant input', 'Safer login on any device', 'Randomised layout', 'Drop-in for banking channels'],
+  },
+  {
+    slug: 'smart-card-scan',
+    name: 'Smart Card Scan',
+    icon: ScanLine,
+    stage: 'Transform',
+    problem: 'Typing card and ID details during onboarding is slow and error-prone.',
+    solution: 'Camera-based card and ID scanning that auto-captures details with OCR to speed onboarding and data entry.',
+    howItWorks: 'The device camera scans the card or ID, OCR extracts the fields, and the values pre-fill the form for the customer to confirm.',
+    benefits: ['Faster data capture', 'Fewer keying errors', 'Smoother onboarding', 'Works on mobile'],
+  },
+  {
+    slug: 'smart-fill-address',
+    name: 'Smart Fill Address',
+    icon: MapPin,
+    stage: 'Transform',
+    problem: 'Manual address entry is slow, inconsistent and a common source of data-quality issues.',
+    solution: 'Intelligent address lookup and auto-fill that completes accurate, structured addresses from a few keystrokes.',
+    howItWorks: 'As the customer types, the field suggests validated addresses and auto-fills the structured fields on selection.',
+    benefits: ['Faster form completion', 'Cleaner address data', 'Fewer errors', 'Better customer experience'],
+  },
+  {
+    slug: 'voice-banking',
+    name: 'Voice Banking',
+    icon: Mic,
+    stage: 'Transform',
+    problem: 'Common banking tasks still require navigating menus and forms, which is not always fast or accessible.',
+    solution: 'A voice-enabled banking assistant that lets customers perform tasks and get answers simply by speaking.',
+    howItWorks: 'Speech is transcribed and interpreted into banking intents, actions are performed securely, and responses are spoken back to the customer.',
+    benefits: ['Hands-free banking', 'More accessible journeys', 'Faster common tasks', 'Natural interaction'],
+  },
+  {
+    slug: 'es6-transformation',
+    name: 'ES6 Code Transformation',
+    icon: FileCode2,
+    stage: 'Transform',
+    problem: 'Legacy JavaScript is hard to maintain, slower to build on, and holds back modernisation.',
+    solution: 'Automated transformation of legacy JavaScript to modern ES6+, accelerating modernisation with consistent results.',
+    howItWorks: 'Source is analysed and converted to modern ES6+ patterns, with engineers reviewing every output before it lands.',
+    benefits: ['Faster modernisation', 'More maintainable code', 'Consistent conversions', 'Expert-reviewed output'],
+  },
+  {
+    slug: 'rsa-encryption',
+    name: 'RSA Encryption',
+    icon: Lock,
+    stage: 'Transform',
+    problem: 'Sensitive banking data in transit and at rest must be protected to a high, provable standard.',
+    solution: 'An RSA-based encryption implementation that secures sensitive data across banking flows.',
+    howItWorks: 'Data is encrypted with RSA public-key cryptography at the boundary and decrypted only where authorised, protecting it end to end.',
+    benefits: ['Strong data protection', 'Secure in transit & at rest', 'Standards-based', 'Audit-ready'],
+  },
+  {
+    slug: 'api-automation',
+    name: 'API Test Automation',
+    icon: Workflow,
+    stage: 'Validate',
+    problem: 'Manual API testing cannot keep pace with a live banking programme, so coverage and confidence slip.',
+    solution: 'An API test-automation framework that validates banking services continuously across the delivery lifecycle.',
+    howItWorks: 'Reusable automated API test suites run in the pipeline, checking functional and integration behaviour on every change.',
+    benefits: ['Higher coverage', 'Faster releases', 'Continuous validation', 'Audit-ready evidence'],
   },
 ];
 

@@ -30,7 +30,7 @@ export const solutions: Solution[] = [
       'Faster time-to-market for new products and regulatory change.',
       'Transformation delivered without disrupting live banking operations.',
     ],
-    relatedAccelerators: ['config-templates', 'migration-toolkit', 'ai-implementation'],
+    relatedAccelerators: ['es6-transformation', 'ci-cd-devops-solution', 'rsa-encryption'],
   },
   {
     slug: 'payments-transformation',
@@ -51,7 +51,7 @@ export const solutions: Solution[] = [
       'Cleaner integration that lowers the cost of future change.',
       'Resilience proven before production, not discovered in it.',
     ],
-    relatedAccelerators: ['deployment-automation', 'test-automation'],
+    relatedAccelerators: ['api-automation', 'ci-cd-devops-solution'],
   },
   {
     slug: 'platform-migration',
@@ -72,7 +72,7 @@ export const solutions: Solution[] = [
       'A rehearsed, low-risk cutover with clear rollback triggers.',
       'Migration effort reduced through reusable accelerators.',
     ],
-    relatedAccelerators: ['migration-toolkit', 'data-mapping', 'ai-implementation'],
+    relatedAccelerators: ['es6-transformation', 'api-automation', 'smart-card-scan'],
   },
   {
     slug: 'platform-upgrade',
@@ -93,7 +93,7 @@ export const solutions: Solution[] = [
       'New platform capabilities adopted, not just installed.',
       'Reduced customisation-impact surprises at go-live.',
     ],
-    relatedAccelerators: ['config-templates', 'test-automation'],
+    relatedAccelerators: ['ci-cd-devops-solution', 'api-automation'],
   },
   {
     slug: 'intelligent-testing',
@@ -114,7 +114,7 @@ export const solutions: Solution[] = [
       'Faster, more confident releases.',
       'Quality evidence ready for audit and sign-off.',
     ],
-    relatedAccelerators: ['test-automation', 'ai-implementation'],
+    relatedAccelerators: ['api-automation', 'ci-cd-devops-solution'],
   },
   {
     slug: 'ai-enabled-engineering',
@@ -135,7 +135,7 @@ export const solutions: Solution[] = [
       'Consistent, up-to-date documentation and test coverage.',
       'Engineering productivity gains that compound across a programme.',
     ],
-    relatedAccelerators: ['ai-implementation', 'documentation-automation'],
+    relatedAccelerators: ['voice-banking', 'es6-transformation'],
   },
 ];
 

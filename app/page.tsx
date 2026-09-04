@@ -2,6 +2,7 @@ import { Hero } from '@/components/home/hero';
 import { TrustStrip } from '@/components/home/trust-strip';
 import { Dashboard } from '@/components/home/dashboard';
 import { ClientLogos } from '@/components/clients/client-logos';
+import { Achievements } from '@/components/home/achievements';
 import { WhatWeSolve } from '@/components/home/what-we-solve';
 import { CapabilitiesSection } from '@/components/home/capabilities-section';
 import { DeliveryLifecycle } from '@/components/home/delivery-lifecycle';
@@ -16,6 +17,7 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustStrip />
+      <Achievements />
       <ClientLogos />
       <Dashboard />
       <WhatWeSolve />

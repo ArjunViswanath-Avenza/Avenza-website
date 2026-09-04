@@ -40,14 +40,14 @@ export function AcceleratorLab() {
           const Icon = a.icon;
           const isOpen = open === a.slug;
           return (
-            <div key={a.slug} className="overflow-hidden rounded-2xl border border-line bg-ink-850/60">
+            <div key={a.slug} className="overflow-hidden rounded-2xl border border-line bg-elevated">
               <button
                 onClick={() => setOpen(isOpen ? null : a.slug)}
                 className="flex w-full items-center gap-4 p-6 text-left"
                 aria-expanded={isOpen}
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-line bg-fill-2">
-                  <Icon className="h-6 w-6 text-brand-400" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-line bg-fill-1">
+                  <Icon className="h-6 w-6 text-brand-600" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
@@ -79,14 +79,14 @@ export function AcceleratorLab() {
                         <ul className="space-y-1.5">
                           {a.benefits.map((b) => (
                             <li key={b} className="flex items-start gap-2 text-sm text-fg-secondary">
-                              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-teal" />
+                              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-600" />
                               {b}
                             </li>
                           ))}
                         </ul>
                         <Link
                           href={`/accelerators/${a.slug}`}
-                          className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand-400 hover:text-brand-300"
+                          className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand-600 hover:text-brand-500"
                         >
                           Full detail <ArrowUpRight className="h-3.5 w-3.5" />
                         </Link>

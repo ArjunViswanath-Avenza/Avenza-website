@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Sora, JetBrains_Mono } from 'next/font/google';
+import { Inter, Sora, JetBrains_Mono, Caveat } from 'next/font/google';
 import './globals.css';
 import { site } from '@/config/site';
 import { Header } from '@/components/site/header';
@@ -10,6 +10,7 @@ import { OrganizationJsonLd, WebsiteJsonLd } from '@/components/seo/json-ld';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const sora = Sora({ subsets: ['latin'], variable: '--font-display', display: 'swap', weight: ['400', '500', '600', '700'] });
 const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' });
+const hand = Caveat({ subsets: ['latin'], variable: '--font-hand', display: 'swap', weight: ['400', '600'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light" className={`${inter.variable} ${sora.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en" data-theme="light" className={`${inter.variable} ${sora.variable} ${mono.variable} ${hand.variable}`} suppressHydrationWarning>
       <body>
         <script
           dangerouslySetInnerHTML={{

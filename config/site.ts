@@ -103,21 +103,10 @@ export const primaryNav: NavItem[] = [
       { title: 'AI-Enabled Engineering', href: '/solutions/ai-enabled-engineering', description: 'Use AI to accelerate delivery.' },
     ],
   },
-  {
-    title: 'Industries',
-    href: '/industries',
-    children: [
-      { title: 'Retail Banking', href: '/industries/retail-banking' },
-      { title: 'Corporate Banking', href: '/industries/corporate-banking' },
-      { title: 'Commercial Banking', href: '/industries/commercial-banking' },
-      { title: 'Payments', href: '/industries/payments' },
-      { title: 'Financial Services', href: '/industries/financial-services' },
-      { title: 'FinTech', href: '/industries/fintech' },
-    ],
-  },
   { title: 'Accelerators', href: '/accelerators' },
   { title: 'Insights', href: '/insights' },
   { title: 'Careers', href: '/careers' },
+  { title: 'Life @ Avenza', href: '/life' },
 ];
 
 export const footerNav = {
@@ -125,9 +114,9 @@ export const footerNav = {
     { title: 'About', href: '/about' },
     { title: 'Capabilities', href: '/capabilities' },
     { title: 'Solutions', href: '/solutions' },
-    { title: 'Industries', href: '/industries' },
     { title: 'Insights', href: '/insights' },
     { title: 'Careers', href: '/careers' },
+    { title: 'Life @ Avenza', href: '/life' },
     { title: 'Contact', href: '/contact' },
   ],
   technology: [

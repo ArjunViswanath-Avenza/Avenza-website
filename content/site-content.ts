@@ -78,13 +78,3 @@ export const whyPillars = [
   { title: 'Flexible Engagement', body: 'End-to-end delivery, staff augmentation or a hybrid — shaped to your programme.' },
   { title: 'People Who Understand Banking', body: 'The kind of team you would trust with a critical banking transformation.' },
 ] as const;
-
-/* --- Industries (CMS-toggled in Phase 5) --- */
-export const industries = [
-  { slug: 'retail-banking', title: 'Retail Banking', summary: 'Modern cores and digital channels for high-volume retail banking.' },
-  { slug: 'corporate-banking', title: 'Corporate Banking', summary: 'Complex product and relationship models delivered on a modern core.' },
-  { slug: 'commercial-banking', title: 'Commercial Banking', summary: 'Scalable platforms for commercial lending and cash management.' },
-  { slug: 'payments', title: 'Payments', summary: 'Payment modernisation and processing at scale on Temenos Payment Hub.' },
-  { slug: 'financial-services', title: 'Financial Services', summary: 'Transformation and testing for the wider financial-services sector.' },
-  { slug: 'fintech', title: 'FinTech', summary: 'Engineering velocity and banking depth for fast-moving fintechs.' },
-] as const;

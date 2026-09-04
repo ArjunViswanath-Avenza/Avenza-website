@@ -44,12 +44,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="light" className={`${inter.variable} ${sora.variable} ${mono.variable} ${hand.variable}`} suppressHydrationWarning>
+    <html lang="en" data-theme="dark" className={`${inter.variable} ${sora.variable} ${mono.variable} ${hand.variable}`} suppressHydrationWarning>
       <body>
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){try{var t=localStorage.getItem('avz-theme');if(t!=='light'&&t!=='dark'){t='light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();",
+              "(function(){try{var t=localStorage.getItem('avz-theme');if(t!=='light'&&t!=='dark'){t='dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();",
           }}
         />
         <OrganizationJsonLd />

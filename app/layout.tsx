@@ -4,6 +4,7 @@ import './globals.css';
 import { site } from '@/config/site';
 import { Header } from '@/components/site/header';
 import { Footer } from '@/components/site/footer';
+import { PromoBanner } from '@/components/site/promo-banner';
 import { SmoothScroll } from '@/components/primitives/smooth-scroll';
 import { OrganizationJsonLd, WebsiteJsonLd } from '@/components/seo/json-ld';
 
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <PromoBanner />
         <Header />
         <main id="main">{children}</main>
         <Footer />

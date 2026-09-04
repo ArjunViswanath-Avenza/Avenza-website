@@ -49,7 +49,7 @@ export function Header() {
     <>
       <header
         className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-all duration-[var(--dur-slow)] ease-[var(--ease-out-expo)]',
+        'fixed inset-x-0 top-[var(--promo-h,0px)] z-50 transition-all duration-[var(--dur-slow)] ease-[var(--ease-out-expo)]',
         scrolled
           ? 'border-b border-line bg-ink-950/80 backdrop-blur-xl'
           : 'border-b border-transparent bg-transparent',
@@ -212,7 +212,7 @@ function MobileMenu({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 top-[4.5rem] z-40 overflow-y-auto bg-ink-950/98 backdrop-blur-xl lg:hidden"
+          className="fixed inset-0 top-[calc(var(--promo-h,0px)+4.5rem)] z-40 overflow-y-auto bg-ink-950/98 backdrop-blur-xl lg:hidden"
         >
           <nav className="container-avz flex flex-col gap-1 py-6" aria-label="Mobile">
             {primaryNav.map((item, i) => (

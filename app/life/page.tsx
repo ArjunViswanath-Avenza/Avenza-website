@@ -26,7 +26,7 @@ export default function LifePage() {
   return (
     <>
       {/* Featured carousel */}
-      <section className="pt-28 lg:pt-36">
+      <section className="pt-32 lg:pt-36">
         <div className="container-avz">
           <div className="overline mb-4">{lifeIntro.overline}</div>
           <LifeCarousel />

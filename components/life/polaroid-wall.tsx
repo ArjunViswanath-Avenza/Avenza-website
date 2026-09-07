@@ -23,7 +23,7 @@ export function PolaroidWall({ photos }: { photos: Snap[] }) {
           key={p.src}
           initial={reduced ? { opacity: 0 } : { opacity: 0, y: -90, x: throwX(i), rotate: throwRot(i), scale: 1.18 }}
           whileInView={reduced ? { opacity: 1 } : { opacity: 1, y: 0, x: 0, rotate: tilt(i), scale: 1 }}
-          viewport={{ once: true, margin: '0px 0px -8% 0px' }}
+          viewport={{ once: false, margin: '0px 0px -8% 0px' }}
           transition={reduced ? { duration: 0.3 } : { type: 'spring', stiffness: 140, damping: 13, mass: 0.7, delay: (i % 8) * 0.05 }}
           whileHover={reduced ? undefined : { rotate: 0, scale: 1.05, zIndex: 20, transition: { type: 'spring', stiffness: 300, damping: 18 } }}
           className="relative mb-4 break-inside-avoid rounded-[3px] bg-white p-2 pb-8 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)]"

@@ -1,3 +1,27 @@
+/** Latest trip — featured at the very top of /life. */
+export const yercaud = {
+  tag: 'Just back from',
+  title: 'Yercaud',
+  subtitle: 'Above the clouds, off the clock — the team’s latest escape to the hills.',
+  video: '/life/yercaud-video.mp4',
+  photos: [
+    '/life/yercaud-1.jpeg',
+    '/life/yercaud-2.jpeg',
+    '/life/yercaud-3.jpeg',
+    '/life/yercaud-4.jpeg',
+    '/life/yercaud-5.jpeg',
+    '/life/yercaud-6.jpeg',
+    '/life/yercaud-7.jpeg',
+    '/life/yercaud-8.jpeg',
+    '/life/yercaud-9.jpeg',
+    '/life/yercaud-10.jpeg',
+  ],
+  stayHeading: 'From hilltop views to DJ nights.',
+  stayBody:
+    'Our Yercaud resort stay had the full spread — team games on the lawn, views that stopped every conversation mid-sentence, food we’re honestly still talking about, and DJ nights that ran well past bedtime. Two days of proper team time, and not a single meeting in sight.',
+  highlights: ['🎲 Team games', '🏔️ Hilltop views', '🍽️ Amazing food', '🎧 DJ nights'],
+};
+
 export const lifeIntro = {
   overline: 'Life @ Avenza',
   title: 'Serious about banking. Not so serious about ourselves.',

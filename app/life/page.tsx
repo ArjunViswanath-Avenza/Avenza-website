@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import { TripVideo } from '@/components/life/trip-video';
+import { TripCollage } from '@/components/life/trip-collage';
 import { LifeCarousel } from '@/components/life/life-carousel';
 import { LifeGallery } from '@/components/life/life-gallery';
 import { CtaBand } from '@/components/site/cta-band';
-import { lifeIntro } from '@/content/life';
+import { lifeIntro, yercaud } from '@/content/life';
 
 export const metadata: Metadata = {
   title: 'Life @ Avenza',
@@ -25,8 +27,31 @@ const vibeTags = [
 export default function LifePage() {
   return (
     <>
-      {/* Featured carousel */}
+      {/* Latest trip — Yercaud (single photo-rectangle collage + resort video) */}
       <section className="pt-32 lg:pt-36">
+        <div className="container-avz">
+          <TripCollage tag={yercaud.tag} title={yercaud.title} subtitle={yercaud.subtitle} photos={yercaud.photos} />
+
+          {/* Resort stay — video (left, ~50%) + write-up (right) */}
+          <div className="mt-16 grid items-center gap-8 lg:mt-24 lg:grid-cols-2 lg:gap-12">
+            <TripVideo src={yercaud.video} />
+            <div>
+              <h2 className="text-h2 text-balance">{yercaud.stayHeading}</h2>
+              <p className="text-lead mt-4">{yercaud.stayBody}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {yercaud.highlights.map((h) => (
+                  <span key={h} className="rounded-full border border-line bg-elevated px-3.5 py-1.5 text-sm text-fg-secondary">
+                    {h}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured carousel */}
+      <section className="section border-t border-line">
         <div className="container-avz">
           <div className="overline mb-4">{lifeIntro.overline}</div>
           <LifeCarousel />
